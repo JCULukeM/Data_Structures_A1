@@ -1,6 +1,5 @@
 from sparse_array import SparseArray
 from random import randint
-from linked_list import _Node
 import sys
 
 
@@ -22,10 +21,8 @@ def get_sequence(sparse_array_list):
 
 
 def main():
-    node_1 = _Node(60, None)
-    print(node_1)
     sparse_array_list = []
-    array = SparseArray(10000)
+    array = SparseArray(1000)
 
     print("The array contains {} elements".format(array.__len__()))
     b = sys.getsizeof(array)
