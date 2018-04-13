@@ -9,11 +9,12 @@ class SparseArray:
             self._next = next
 
         def __str__(self):
-            return 'Element: {}   Next {}'.format(self._element, self._next)
+            return '{}'.format(self._element)
 
     def __init__(self, _n=0):
         self._n = _n
         self._A = self._make_array(self._n)
+
 
     def _make_array(self, size):
         """Return new array with capacity n."""
@@ -27,9 +28,6 @@ class SparseArray:
             node_list.append(self._Node(None, 0))
         return node_list
 
-    def is_empty(self, node_object):
-        pass
-
     def fill(self,seq):
         for element in seq:
             self._A[self._n] = element
@@ -41,20 +39,19 @@ class SparseArray:
             k += len(self)
         if not 0 <= k < self._n:
             raise IndexError('invalid index')
-        return self._A[k]  # retrieve from array
+        return self._A[k]._element  # retrieve from array
 
     def __setitem__(self, k, value):
         """Insert value at index k"""
         self._A[k] = self._Node(value, k + 1)  # store newest element
-#        self._n += 1
 
     def __len__(self):
         return self._n
 
     def get_usage(self):
         non_empty = 0
-        for i in range(1, len(self._A)):
-            if self._A[i] is None:
+        for i in self._A:
+            if i._element is not None:
                 non_empty +=1
         return non_empty
 

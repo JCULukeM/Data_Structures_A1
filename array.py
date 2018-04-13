@@ -1,4 +1,4 @@
-from sparse_array import SparseArray
+from without_node import SparseArray
 from random import randint
 import sys
 
