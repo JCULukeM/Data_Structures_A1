@@ -9,14 +9,15 @@ def main():
 
     print(array[50])
 
-    array[40] = 66
+    array[-1] = 66
+    array.fill(my_list)
+    print(array[-1])
+    print(len(array))
+    array[98] = 77
 
-    print(array[40])
-    """print(len(array))
-    array[98] = 66
     for element in array:
         print(element)
-    print("{} nodes used".format(array.get_usage()))"""
+#    print("{} nodes used".format(array.get_usage()))
 
 main()
 

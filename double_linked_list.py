@@ -1,5 +1,6 @@
 from list_node import ListNode
 
+
 class DoubleLinkedList:
     def __init__(self):
         self.head = None
@@ -26,7 +27,6 @@ class DoubleLinkedList:
 
     def __getitem__(self, item):
         current_node = self.head
-
 
         while current_node is not None:
             if current_node.is_index(item):
