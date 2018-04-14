@@ -34,21 +34,6 @@ class DoubleLinkedList:
                 return results
             current_node = current_node.next
 
-
-    def unordered_search(self, value):
-        current_node = self.head
-        node_id = 1
-        results = []
-
-        while current_node is not None:
-            if current_node.has_value(value):
-                results.append(node_id)
-
-            current_node = current_node.next
-            node_id += 1
-
-        return results
-
     def add_list_item(self, item):
         if isinstance(item, ListNode):
             if self.head is None:

@@ -3,6 +3,7 @@ import ctypes
 
 
 class SparseArray:
+
     """
     constructor(number of elements = 0)
         instance.Element = element
